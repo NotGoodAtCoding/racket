@@ -4,15 +4,7 @@
 ;(require "helperheap.rkt")
 (provide (all-defined-out))
 
-#|
 
-Theoretically, no, the result of computation in terms of the output should not differ. However, since we
-return the environment and the heap as well as teh result of computation in the eval method it can also
-be said that these semantics are changed since it is possible for those values to be different. If, for
-example a variable is conditionally assigned then it amy have a different value on the heap, but the
-result should not change. 
-
-|#
 
 ;; to make sure I remember what I am using
 (define (value result) (car result))
